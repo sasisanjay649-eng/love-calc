@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus AI Romance & Compatibility Scanner</title>
+  <meta name="description" content="Calculate your real-time compatibility score and mutual attraction telemetry with Campus AI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-pink" aria-hidden="true"></div>
+  <div class="ambient-glow glow-violet" aria-hidden="true"></div>
+  <div class="ambient-glow glow-cyan" aria-hidden="true"></div>
+
+  <!-- Subtle animated cyber grid -->
+  <div class="cyber-grid" aria-hidden="true"></div>
+
+  <main class="main-wrapper">
+    <div class="scanner-card glass-panel" id="scanner-container">
+
+      <!-- ================= SCREEN 1: INPUT TRAP ================= -->
+      <section id="screen-input" class="screen-view active-view" aria-label="Compatibility Input Form">
+        <div class="badge-pill">
+          <span class="badge-dot"></span>
+          <span>CAMPUS NEURAL LINK v4.2 • QUANTUM ENGINE</span>
+        </div>
+
+        <h1 class="main-title">Campus AI Romance &amp; Compatibility Scanner</h1>
+        <p class="subtitle">Calculate your real-time compatibility score and mutual attraction telemetry.</p>
+
+        <form id="compatibility-form" novalidate onsubmit="return false;">
+          <div class="form-group">
+            <label for="your-name" class="input-label">
+              <span class="label-icon">👤</span> Your Name
+            </label>
+            <div class="input-wrapper">
+              <input 
+                type="text" 
+                id="your-name" 
+                name="yourName" 
+                class="cyber-input" 
+                placeholder="e.g., Sanjay" 
+                autocomplete="off"
+                maxlength="50"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="crush-name" class="input-label">
+              <span class="label-icon">💘</span> Your Crush's Name
+            </label>
+            <div class="input-wrapper">
+              <input 
+                type="text" 
+                id="crush-name" 
+                name="crushName" 
+                class="cyber-input" 
+                placeholder="e.g., Ananya" 
+                autocomplete="off"
+                maxlength="50"
+                required
+              >
+            </div>
+          </div>
+
+          <!-- Inline Validation Alert -->
+          <div id="input-error" class="error-banner hidden" role="alert" aria-live="polite">
+            <span class="error-icon">⚠️</span>
+            <span id="error-text">Please enter both names to run the analysis.</span>
+          </div>
+
+          <button type="submit" id="btn-submit" class="cyber-btn primary-btn">
+            <span class="btn-text">Calculate Love Compatibility 💘</span>
+            <span class="btn-glow"></span>
+          </button>
+        </form>
+
+        <div class="card-footer">
+          <span class="security-tag">🔒 256-Bit Quantum Encryption Active</span>
+        </div>
+      </section>
+
+      <!-- ================= SCREEN 2: SCANNING SEQUENCE ================= -->
+      <section id="screen-scanning" class="screen-view hidden" aria-label="AI Scanning Sequence">
+        <div class="scanner-visual">
+          <div class="radar-circle">
+            <div class="radar-sweep"></div>
+            <div class="radar-core">💖</div>
+          </div>
+        </div>
+
+        <h2 class="scanning-title">Calculating Quantum Compatibility...</h2>
+        
+        <div class="telemetry-box">
+          <span class="telemetry-label">TELEMETRY LOCK</span>
+          <div class="telemetry-names">
+            <span class="name-chip user-chip" id="display-your-name"></span>
+            <span class="heart-pulse">❤️</span>
+            <span class="name-chip crush-chip" id="display-crush-name"></span>
+          </div>
+        </div>
+
+        <!-- Progress Bar and Percentage -->
+        <div class="progress-section">
+          <div class="progress-meta">
+            <span class="progress-title">Neural Model Inference</span>
+            <span class="progress-value" id="progress-percent">0%</span>
+          </div>
+          <div class="progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-fill" id="progress-bar"></div>
+          </div>
+        </div>
+
+        <!-- Dynamic cycling status message -->
+        <div class="status-box">
+          <div class="pulse-indicator"></div>
+          <p class="status-text" id="status-message">Scanning college attendance and mutual timings...</p>
+        </div>
+
+        <div class="scanning-hints">
+          <span>Synthesizing campus biometrics &amp; social graph data</span>
+        </div>
+      </section>
+
+      <!-- ================= SCREEN 3: PANIC RESULT ================= -->
+      <section id="screen-result" class="screen-view hidden" aria-label="Scan Result Notification">
+        <!-- Critical Alert Badge -->
+        <div class="panic-badge">
+          <span class="siren-icon">⚠️</span>
+          <span>CRITICAL NOTIFICATION: REPORT DISPATCHED</span>
+        </div>
+
+        <!-- Compatibility Score Card -->
+        <div class="score-card">
+          <span class="score-tag">VERIFIED NEURAL MATCH</span>
+          <div class="score-headline">Compatibility Score: <span class="score-number">99.8%</span> 💘</div>
+        </div>
+
+        <!-- Panic Punchline Card -->
+        <div class="punchline-card">
+          <p class="punchline-main">
+            Also... your crush's name (<strong class="punchline-crush" id="result-crush-name"></strong>) has been automatically sent to your parents via SMS &amp; WhatsApp! 💀📱
+          </p>
+
+          <div class="tamil-punchline-box">
+            <p class="tamil-text">
+              Nee gaali! Ippo poi veetla enna samalikka poranu yosi! 🏃‍♂️💨
+            </p>
+          </div>
+
+          <p class="advice-text">
+            Official recommendation: Start packing your bags or prepare a solid explanation before reaching home.
+          </p>
+        </div>
+
+        <!-- Reset Button -->
+        <button type="button" id="btn-reset" class="cyber-btn panic-btn">
+          <span class="btn-text">Fine, I'm terrified 😭</span>
+          <span class="btn-glow"></span>
+        </button>
+
+        <div class="prank-watermark">
+          <span>⚡ Gotcha! It's just a prank. Or is it? 😏</span>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
