@@ -153,6 +153,67 @@ body {
   transform: translateY(10px);
 }
 
+/* ---------------- Creator Attribution on Top ---------------- */
+.creator-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.by-prefix {
+  font-family: var(--font-code);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.insta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 42, 133, 0.08);
+  border: 1px solid rgba(255, 42, 133, 0.3);
+  border-radius: 999px;
+  padding: 5px 14px 5px 10px;
+  color: #f5f6fa;
+  text-decoration: none;
+  font-family: var(--font-code);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: var(--transition-smooth);
+}
+
+.insta-pill:hover {
+  background: linear-gradient(135deg, rgba(255, 42, 133, 0.22), rgba(155, 81, 224, 0.25));
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 16px rgba(255, 42, 133, 0.4);
+  color: #ff9ec4;
+  transform: translateY(-1px);
+}
+
+.insta-icon {
+  width: 15px;
+  height: 15px;
+  stroke: var(--neon-pink);
+  flex-shrink: 0;
+  transition: stroke 0.25s ease, transform 0.25s ease;
+}
+
+.insta-pill:hover .insta-icon {
+  stroke: var(--neon-cyan);
+  transform: rotate(5deg) scale(1.1);
+}
+
+.insta-handle {
+  display: inline-block;
+}
+
 /* ---------------- Pill Badge ---------------- */
 .badge-pill {
   display: inline-flex;
